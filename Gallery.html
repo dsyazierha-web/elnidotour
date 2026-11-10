@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - El Nido Tours</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Offline Falling Snow Effect -->
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <h2>El Nido Tours</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <section class="hero" style="flex: 3;">
+            <span class="welcome-badge">VISUAL JOURNEY</span>
+            <h1>El Nido <mark>Photo & Video Gallery</mark></h1>
+            <p class="intro-text">Explore real captures of our island-hopping destinations and lagoon tours displayed in grid cards.</p>
+
+            <!-- Gallery Grid Container -->
+            <div class="gallery-grid">
+                <!-- Card 1 -->
+                <div class="gallery-card">
+                    <h3>Scenic Lagoon and Beaches</h3> 
+                    <img src="lagoons.webp" alt="El Nido Lagoons & Beaches 1" onclick="openModal(this.src)" style="cursor:zoom-in; width:100%;">
+                    <p>Turquoise lagoons and emerald waters surrounded by towering limestone cliffs.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="gallery-card">
+                    <h3>Caves and Islands</h3>
+                    <img src="island.png" alt="El Nido Caves & Islands 2" onclick="openModal(this.src)" style="cursor:zoom-in; width:100%;">
+                    <p>Explore hidden caves and iconic islands like Helicoper and Shimizu Island.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="gallery-card">
+                    <h3>Hidden and Snorkeling</h3>
+                    <img src="snorkeling.jpg" alt="El Nido Hidden Beaches & Snorkeling 3" onclick="openModal(this.src)" style="cursor:zoom-in; width:100%;">
+                    <p>Discover Hidden Beach and vibrant coral reefs perfect for snorkeling.</p>
+                </div>
+            </div>
+
+            <!-- Video Section -->
+            <div class="media-box" style="margin-top: 50px;">
+                <h3>Tour Highlights Video</h3>
+                <video controls style="width:100%; height:500px; border-radius:10px; box-shadow:0 1px 30px rgba(65, 215, 223, 0.3);">
+                    <source src="video-elnido.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Right Sidebar Card -->
+        <aside class="right-sidebar" style="flex: 1;">
+            <h3>GALLERY NOTE</h3>
+            <p>Hover your mouse cursor over the images to see the zoom effect! Play the video below for preview clips.</p>
+        </aside>
+    </div>
+
+<!-- FULL IMAGE VIEWER -->
+<div id="imageModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center;" onclick="closeModal()">
+  <img id="modalImage" src="" style="max-width:95%; max-height:95%; border-radius:15px;">
+</div>
+
+<script>
+function openModal(src){
+  document.getElementById('modalImage').src = src;
+  document.getElementById('imageModal').style.display = 'flex';
+}
+function closeModal(){
+  document.getElementById('imageModal').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
